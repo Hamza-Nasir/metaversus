@@ -1,5 +1,7 @@
 'use client';
 
+import Image from "next/image";
+
 import { motion } from "framer-motion";
 import { staggerContainer } from "@/utils/motion";
 import { TypingText, TitleText } from "@/components";
@@ -14,9 +16,10 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
                 duration-[0.7s] ease-out-flex cursor-pointer`}  
     onClick={() => handleClick(id)}
   >
-    <img
+    <Image
       src={imgUrl}
       alt={title}
+      fill={true}
       className="absolute w-full h-full object-cover rounded-[24px]"
     />
 
